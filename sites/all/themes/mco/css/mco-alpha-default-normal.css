@@ -1,0 +1,1522 @@
+ .zone-content {
+	margin-top: 30px;
+	border-bottom: solid 1px;
+	padding-bottom: 10px;
+}
+
+.field-name-body h2{
+	display:none;
+}
+
+.panel-col{
+	margin:320px 320px 20px 320px;
+}
+
+.alpha-resize-indicator{
+	display:none;
+}
+
+.pane-node-field-testimonial-logo{
+	margin-left:-260px;
+	margin-top:-320px;
+}
+
+.pane-node-field-testimonial-comment{
+	margin-top:-166px;
+	width:380px;
+	}
+
+.pane-node-field-testimonial-image{
+	width:500px;
+	}
+	
+.pane-node-field-website{
+	margin-top:10px;
+	font-size: 13px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	}
+	
+/* Header - Search */
+.page-node-5 .block-search-by-page,
+.page-node-12 .block-search-by-page,
+.page-node-41 .block-search-by-page,
+.page-node-43 .block-search-by-page,
+.page-node-44 .block-search-by-page,
+.page-node-45 .block-search-by-page,
+.page-node-46 .block-search-by-page,
+.page-node-47 .block-search-by-page,
+.page-node-48 .block-search-by-page,
+.page-node-49 .block-search-by-page,
+.page-node-50 .block-search-by-page,
+.page-node-51 .block-search-by-page,
+.page-node-52 .block-search-by-page,
+.page-node-53 .block-search-by-page,
+.page-node-56 .block-search-by-page,
+.page-node-61 .block-search-by-page,
+.page-node-61 .block-search-by-page
+   {
+	 float:right;
+	 margin-top:30px;
+	 margin-bottom:35px;
+}
+
+label{
+	font-size: 12px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+
+.block-page-text form#search-by-page-form{
+	margin-right: 50px;
+	float:right;
+}
+
+.region-menu-inner .block-main-menu {
+   float: left;
+}
+
+.region-menu-inner .block-search-form {
+   float: right;
+   padding-top: 10px;
+}
+
+.search-form-block {
+  margin-bottom: 5px;
+}
+
+.search-form-block .form-text {
+  font-size: 1.2em;
+  width: 126px;
+  border: none;
+  height: 27px;
+  padding: 2px;
+  background: url("../images/search-back.png") no-repeat 4px 3px #F9F5F2;
+}
+
+.search-form-block .form-actions {
+  display: none;
+}
+/*
+button{
+-webkit-appearance: none;
+-moz-border-radius: 11px;
+-webkit-border-radius: 11px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding;
+background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+border-radius: 11px;
+background: #ddd url(../images/button.png) repeat-x;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+border: 1px solid;
+cursor: pointer;
+color: #333;
+font-weight: bold;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+font-size: 12px;
+outline: 0;
+overflow: visible;
+padding: 3px 10px 4px;
+/* text-shadow: #fff 0 1px 1px;   */
+width: auto;
+border-color: #ddd #bbb #999;
+margin-left; 200px;
+}
+*/
+.search-results a{
+	color:#000;
+}
+
+/*
+.page-node-41 .zone-header{
+	display:block;
+	background-image: url("../images/mco-gradient-strip.png");
+    background-repeat: no-repeat;
+}
+*/
+.ibd-logo{
+      margin-top: 5px;
+      float:left;
+ }
+ 
+ .testimonial-non-landing .views-row{
+	float:right;
+	margin-left:0px;
+	margin-bottom: 28px;
+}
+
+.testimonial-landing-page-free-report .views-row{
+	float:left;
+	margin-left:5px;
+}
+
+.field-name-field-basic-page-description ul{
+	list-style-type: disc;
+}
+
+ul {
+	list-style: none outside none;
+	font-size: 15px;
+	line-height: 1.7;
+}
+
+.zone-postscript {
+	width: 940px;
+	height:290px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #000;
+	padding: 0;
+	margin: 0;
+    font-size:13px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1 {
+    color: #000088;
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+	margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+	font-size: 16px;
+	margin-bottom: 10px;
+	color: #4599cc;
+}
+
+h3 {
+	font-size: 1.3em;
+	margin-bottom: 10px;
+}
+
+h4, h5 {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+p {
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   font-size: 15px;
+   line-height: 1.7;
+}
+
+.clear-left {
+  clear: left;
+}
+
+h2.block-title{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+   margin-top: 0px;
+   margin-bottom: 10px;
+   font-weight:bold;
+   color: #4599cc;
+   font-size: 18px;
+   padding-top: 6px;
+}
+
+ul li.leaf{
+	list-style-image:none;
+	list-style-type:none;
+}
+
+.item-list ul{
+    line-height:1.1;
+}
+
+.region-sidebar-first a:link, a:visited {
+	font-size: 15px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin-left:20px;
+}
+a:link, a:visited {
+	font-size: 15px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+a:hover {
+	text-decoration:none;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+li a.active {
+   color: #ffffff;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* Website link on testimonial page */
+.pane-node-field-website a:link, 
+.pane-node-field-website a:visited {
+	font-size: 13px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.pane-node-field-website a:hover {
+	text-decoration:none;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+li a.active {
+   color: #ffffff;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#breadcrumb ul.breadcrumb {
+   display: block;
+}
+
+#zone-branding .logo-img {
+  float:left;
+}
+
+copyright {
+   float: left;
+   margin-top:5px;
+}
+.copyright p{
+   font-size: 11px;
+  }
+
+.container-12{
+    width: 940px;
+    
+}
+
+.grid-12{
+    margin:0px;
+}
+
+/* Branding */
+.branding-data::after {
+  display: none;
+}
+
+# /*landing-wrapper{
+	border: 1px solid #001959;
+	border-style:solid none;
+	*/
+}
+
+#region-branding.region-branding{
+    margin:0px;
+}
+.zone-branding{
+     margin:0px;
+}
+
+/*take out*/
+/*.region-content{
+	margin-bottom: 10px;
+}
+*/
+
+/* Blocks */
+
+.mcocreative-logo{
+	 float:left;
+	 width: 255px;
+     height:80px;
+     margin-left: 5px;
+	 margin-top:15px;
+}
+
+.call-cta {
+     float:left;
+     display: block;
+	 width: 210px;
+	 height: 50px;
+	 float:right;
+	 margin-top:35px;
+     background-color:#ff4500;
+     color:#fff;
+     font-size: 15px;
+	 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+     font-weight:bold;
+     border-radius: 15px;
+	 text-align:left;
+	 position:relative; 
+	 
+}
+
+.call-cta p{
+	 height: 60px;
+	 position:absolute;
+	 top:50%;
+	 margin-top:-26px;
+	 margin-left:25px;
+}
+
+#zone-header .
+{
+    float:right;
+	margin-top:42px;  
+}
+
+ .contact-box {
+	background-color:#ff4500;
+	border-radius: 15px;
+	width:240px;
+	float:right;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	padding-top: 12px;
+	padding-bottom: 10px;
+     color:#fff;	
+}
+
+#zone-header .contact-box img {
+    margin-bottom: 5px;
+}
+
+#zone-header .contact-box p{ 
+    padding-left:12px;
+    margin-bottom: 5px;
+    line-height:1;  
+}
+
+.contact-box .content a{
+    color: #fff;
+}
+ 
+/* Menus */
+
+.region-menu .menu-block-wrapper a:hover, .region-menu .menu-block-wrapper a.active {
+  text-decoration: none;
+}
+
+.region-menu{
+	background-color:#24435E;
+	height: 60px;
+	-webkit-appearance: none;
+-moz-border-radius: 11px;
+-webkit-border-radius: 11px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding;
+border-radius: 11px;
+}
+
+.region-menu ul {
+    float:left;
+    list-style:none ouside none;
+    color: #000;
+}
+
+ul.menu li{
+	float:left;
+	margin-bottom:4px;
+}
+
+.region-menu .main-menu ul li {
+    float:left;
+    list-style: none outside none;
+    margin: 10px;
+	font-size: 16px; 
+}
+
+.region-menu .menu-block-wrapper a {
+    color: #ffffff;
+	text-decoration:none;
+	padding:5px;
+	margin-left:36px;
+}
+.region-menu .menu-block-wrapper a:link {
+    color: #ffffff;
+	text-decoration:none;
+	padding:5px;
+	margin-left:12px;
+}
+
+.region-menu .menu-block-wrapper a:visited {
+    color: #fff;
+	text-decoration:none;
+	padding:5px;
+	margin-left:42px;
+}
+
+.region-menu .menu-block-wrapper a:active {
+	color: #fff;
+}
+
+.region-menu .menu-block-wrapper a:hover {
+	color: #c0c0c0;	
+}
+
+/* Content - home page */
+
+.zone-header-wrapper{
+	height:126px;
+}
+
+/*
+.region-content-inner{
+   margin-top:51px;
+}
+*/
+
+.page-node-41 .home-intro p {
+	margin-top: 30px;
+}
+
+.region-sidebar-first{
+ /*    height:300px; */
+}
+
+.ten-top-tips-image {
+	 float:left;	
+	 margin-right: 20px;
+}
+
+.ten-top-tips-text-left{
+	 background-image: url("../images/arrow-left.png");
+	background-repeat:no-repeat;
+	width: 170px;
+	margin-top: 20px;
+	margin-left: 170px;
+	margin-right: 35px;
+	height:250px;
+}
+
+.ten-top-tips-text-left  p{ 
+    color: #fff;
+	font-size: 16px;
+	line-height: 1.4;
+	padding: 22px 8px 132px 53px;
+}
+
+.arrow-down-text{
+	 background-image: url("../images/arrow-down.png");
+	background-repeat:no-repeat;
+	float: right;
+	width: 221px;
+	margin-top: -20px;
+}
+
+.arrow-down-text  p{ 
+    color: #fff;
+	font-size: 16px;
+	line-height: 1.4;
+	text-align: justify;
+	padding: 15px  23px  60px  26px;	
+}
+
+/*about us page*/
+
+.photo.block-23 {
+	margin-top: -10px;
+}
+
+.photo.block-24 {
+	margin-top: 85px;
+}
+
+/* Inner Pages Content*/
+
+.inner-pages-content .region-content-inner  {
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+
+/* Postscript Zone */
+.region-postscript-first {
+	background-color: #001959;
+	height:270px;
+	/*border-top:solid 2px;*/
+}
+
+.region-postscript-second {
+	border-top:solid 2px;
+}
+
+.region-postscript-third{
+	border-top:solid 2px;
+}
+
+/* Testimonials */
+
+.view-testimonials{
+	clear:both;
+	border-top-style: none;
+	border-top-color: #fff;
+	border-top-width: 0px;
+}
+
+.web-design-testimonials-page .views-row-1 {
+	clear:both;
+	border-bottom-color: #24435e;
+	border-bottom-style: solid;
+	border-bottom-width:1px;
+	border-top-color: #fff;
+	padding-bottom:240px;
+}
+
+.web-design-testimonials-page .views-row-2 {
+	clear:both;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	border-bottom-width: 1px;
+	padding-bottom:285px;
+	margin-top:20px;
+}
+
+.web-design-testimonials-page .views-row-3 {
+	clear:both;
+	padding-bottom:280px;
+	margin-top:20px;
+}
+
+.web-design-testimonials-page .views-field-field-testimonial-logo {
+	float:left;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+.web-design-testimonials-page .views-field-field-testimonial-comment {
+	margin-top: 20px;
+	width: 350px;
+	margin-left: 160px;	
+}
+
+.web-design-testimonials-page .views-field-field-testimonial-comment p{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:15px;
+}
+
+.web-design-testimonials-page .views-field-field--testimonial-client {
+	float:left; 
+	margin-left: 20px;
+	margin-bottom:20px;
+}
+
+.web-design-testimonials-page .views-field-field--testimonial-client p{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-style:italic;
+	font-size:15px;
+	float:right;
+}
+
+.web-design-testimonials-page .views-row-2 .views-field-field--testimonial-client p{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-style:italic;
+	font-size:15px;
+	margin-left: 140px;
+}
+
+.web-design-testimonials-page .views-row-1 .views-field-field-large-image {
+	float:right;
+	margin-top: -120px;
+}
+
+.web-design-testimonials-page .views-row-2 .views-field-field-large-image {
+	float:right;
+	margin-top: -295px;
+}
+
+.web-design-testimonials-page .views-row-3 .views-field-field-large-image {
+	float:right;
+	margin-top: -138px;
+}
+
+.web-devel-testimonials-page .views-row-1 {
+	clear:both;
+	border-bottom-color: #24435e;
+	border-bottom-style: solid;
+	border-bottom-width:1px;
+	border-top-color: #fff;
+	padding-bottom:450px;
+}
+
+.web-devel-testimonials-page .views-row-2 {
+	clear:both;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	border-bottom-width: 1px;
+	padding-bottom:250px;
+	margin-top:20px;
+}
+
+.web-devel-testimonials-page .views-row-3 {
+	clear:both;
+	padding-bottom:280px;
+	margin-top:20px;
+}
+
+.web-devel-testimonials-page .views-field-field-testimonial-logo {
+	float:left;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+.web-devel-testimonials-page .views-field-field-testimonial-comment {
+	margin-top: 10px;
+	width: 350px;
+	margin-left: 160px;	
+}
+
+.web-devel-testimonials-page .views-field-field-testimonial-comment p{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:15px;
+}
+
+.web-devel-testimonials-page .views-field-field--testimonial-client {
+	float:left; 
+	margin-left: 20px;
+	margin-bottom:20px;
+}
+
+.web-devel-testimonials-page .views-field-field--testimonial-client p{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-style:italic;
+	font-size:15px;
+	float:right;
+}
+
+.web-devel-testimonials-page .views-row-1 .views-field-field-large-image {
+	float:right;
+	margin-top: -130px;
+}
+
+.web-devel-testimonials-page .views-row-2 .views-field-field-large-image {
+	float:right;
+	margin-top: -115px;
+}
+
+.web-devel-testimonials-page .views-row-3 .views-field-field-large-image {
+	float:right;
+	margin-top: -140px;
+}
+
+.print-design-testimonials-page .views-row-1 {
+	clear:both;
+	border-bottom-color: #24435e;
+	border-bottom-style: solid;
+	border-bottom-width:1px;
+	border-top-color: #fff;
+	padding-bottom:320px;
+}
+
+.print-design-testimonials-page .views-row-2 {
+	clear:both;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	border-bottom-width: 1px;
+	padding-bottom:50px;
+	margin-top:20px;
+}
+
+.print-design-testimonials-page .views-row-3 {
+	clear:both;
+	padding-bottom:170px;
+	margin-top:20px;
+}
+
+.print-design-testimonials-page .views-field-field-testimonial-logo {
+	float:left;
+	margin-left: 0px;
+	margin-top: 0px;
+	
+}
+
+.print-design-testimonials-page .views-field-field-testimonial-comment {
+	margin-top: 10px;
+	width: 350px;
+	margin-left: 160px;
+	/*float:left;*/
+	
+}
+.print-design-testimonials-page .views-field-field-testimonial-comment p{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:15px;
+	
+}
+
+.print-design-testimonials-page .views-field-field--testimonial-client {
+	float: left; 
+	margin-left: 160px;
+	margin-bottom:20px;
+}
+
+.print-design-testimonials-page .views-field-field--testimonial-client p{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-style:italic;
+	font-size:15px;
+}
+
+/* Styling to take account of silverrocks logo image conflicting with comment and client */
+
+.print-design-testimonials-page .views-row-3 .views-field-field--testimonial-client p{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-style:italic;
+	font-size:15px;
+	margin-left: -140px;
+}
+
+.print-design-testimonials-page .views-row-1 .views-field-field-large-image {
+	float:right;
+	margin-top: -245px;
+}
+
+.print-design-testimonials-page .views-row-2 .views-field-field-large-image {
+	float:right;
+	margin-top: -360px;
+}
+
+.print-design-testimonials-page .views-row-3 .views-field-field-large-image {
+	float:right;
+	margin-top: -112px;
+}
+
+.testimonials-front{
+	height:170px;
+	margin-bottom: 22px;
+	background-color: #FFE9E8;
+	border-radius: 15px;
+}
+
+p.p1 a:link,
+p.p1 a:visited{
+    font-size: 13px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.testimonials-front .views-field-title span.field-content{
+	margin-left:5px;
+}
+
+.testimonials-front p{
+   margin-top:5px;
+   margin-left: 5px;
+   margin-right:5px;   
+}
+
+.testimonials-front p{
+	padding-top:2px;
+	padding-left: 5px;
+	padding-right:5px;
+	color:#000;
+}
+
+#node-testimonials-12 h2.node-title{
+    color:#000;
+}
+
+.view-display-id-block_2 .views-row {
+   margin-bottom: 10px;
+}
+
+.view-display-id-block .view-testimonials{
+    font-weight:normal;
+    font-size: 10px;
+    line-height:normal;
+}
+
+.view-display-id-block .views-field-field-testimonial-comment .field-content p{
+   text-align:justify;
+   font-style: normal;
+   margin:8px 15px 0px 15px;
+   font-size: 13px;
+   width:340px;
+   line-height: 17px;
+   }
+
+.testimonials-front .views-field-field--testimonial-client .field-content p{
+   font-style: italic;
+   float:right;
+   font-size:13px;
+   padding-right: 15px;
+   
+}
+
+.testimonials-page views-field-field-testimonial-customer .field-content{
+   font-style: italic;
+   float: left;
+}
+
+
+.testimonials-landing-page-free-report li{
+	clear:both;
+}
+
+.view-display-id-block .views-field-field-testimonial-customer.field-content p{
+   font-weight:normal;
+    font-size: 12px;
+    line-height:normal;
+    text-align:right;
+	margin-right: 14px;
+    margin-bottom:1px;
+   font-style: italic;
+}
+	
+.view-display-id-block .views-field-title{
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+.node-type-landing-page-base .view-testimonials .views-field-field--testimonial-client{
+	font-size: 10px;
+}
+
+/* Jargon Buster page */
+
+.view-terminology .views-field-title {
+    color: #0099cc;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	 font-size: 17px;
+    font-weight: bold;
+}
+
+/* Key Tips page */
+
+.view-blog .views-field-title {
+    color: #0099cc;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+/* Main testimonials page */
+
+.view-display-id-block_2 .view-testimonials{
+    font-weight: normal;
+    font-size: 10px;
+    line-height:normal;
+}
+
+.view-display-id-block_2 .views-field-field-testimonial-customer{ 
+    font-weight:normal;
+    font-size: 10px;
+    line-height:normal;
+    text-align:right;
+}
+
+.view-display-id-block_2 .views-field-field-testimonial-customer .field-content p{
+   margin-right: 4px;
+   margin-bottom:1px;
+   font-size: 1.4em;
+}
+
+.view-display-id-block_2 .views-field-field-testimonial-comment{ 
+    font-weight:normal;
+    font-size: 10px;
+    line-height:normal;
+}
+
+.view-display-id-block_2 .views-field-field-testimonial-comment .field-content p{
+   font-style: normal;
+   margin-right: 4px;
+   margin-bottom:0px;
+   font-size: 1.4em;
+}
+
+.view-display-id-block_2 .views-field-field-testimonial-image .field-content img{
+    margin-top: 5px;
+}
+
+.field-name-field-testimonial-customer p{
+	font-style: italic;
+	font-size: 13px
+}
+
+/* Footer */
+
+.company-details{
+   margin-top:12px;
+   margin-left:120px;
+   float:left;
+   display:inline-block;
+   width: 310px;
+}
+
+.company-details p{
+	margin-bottom: 1px;;
+	font-size: 10.5px;
+	text-align:left;
+}
+
+.footer-user-menu {
+	margin-left: 10px;
+	margin-top: 4px;
+	float:right;
+	
+}
+
+.footer-user-menu ul li a{
+font-size:12px;
+}
+#region-footer-second .footer-address{
+   font-size: 10px;
+   margin-left: 20px;
+   margin-top:5px;
+   float:left;
+}
+
+.zone-footer{
+     border-style: solid black;
+	 border-top: 20px;
+}
+
+.zone-footer, .zone-footer a, .zone-footer a.active {
+  text-align: center;
+  color: #000;
+}
+
+#region-footer-second .footer-address{
+	margin-top:5px;
+	
+}
+
+#region-footer-second .footer-address p{
+	font-size: 12px;
+	margin-bottom:0px;
+	text-align: left;
+}
+
+.social-media {
+	width: 150px;
+	margin-left:150px;
+	float:left;
+}
+
+/* Landing Page */
+
+
+
+.node-type-landing-page-base .panel-col-top img {
+	float:left;
+}
+
+.node-type-landing-page-base .panel-2col-stacked .panel-col-first {
+	width: 620px;
+}
+
+.node-type-landing-page-base .panel-2col-stacked .panel-col-last{
+	width: 300px;
+	margin-left: 20px;
+}
+
+.node-type-landing-page-base .panel-2col-stacked .panel-col-last .inside {
+	margin-left:0px;
+}
+
+.node-type-landing-page-base .views-field-field--testimonial-client .field-content p{
+   font-style: italic;
+   float:right;
+   font-size:13px;
+   padding-right: 4px;
+   
+}
+
+.pane-testimomials-panel-pane-2 h2{
+	 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+     color: #000;
+     font-weight: bold;
+}
+.node-type-landing-page-base .field-name-field-landing-page-headline h1 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    color: #24435e;
+    font-weight: bold;
+   text-align: left;
+   margin-top: -10px;
+    }
+
+.node-type-landing-page-base .field-name-field-landing-page-sub-headline h2 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #ff4500;
+    font-weight: normal;
+    margin-top: -20px;
+	line-height: 80px;
+    }
+
+p.headline{
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.node-type-landing-page-base .benefits h4 {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.node-type-landing-page-base .benefits p{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.node-type-landing-page-base .benefits li{
+	list-style-type: disc;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.node-type-landing-page-base .guarantee h4 {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.node-type-landing-page-base .guarantee p{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.node-type-landing-page-base .guarantee li{
+	list-style-type: disc;
+	font-weight: bold;
+	font-size: 14px;
+	margin-left:15px;
+}
+
+.node-type-landing-page-base .mcocreative-description h3 {
+	font-weight: bold;
+	font-size: 22px;
+	margin-top: -10px;
+}
+
+.node-type-landing-page-base .mcocreative-description p{
+	font-size: 16px;
+}
+
+.node-type-landing-page-base .benefits li{
+	list-style-type: disc;
+	font-weight: bold;
+	font-size: 14px;
+	margin-left:10px;
+}
+
+.ten-top-tips-text-right {
+	background-image: url('../images/arrow-right.png');
+	background-repeat: no-repeat;
+	display:block;
+	width: 230px;
+	height: 235px;
+	float:left;
+	margin-top: 15px;	
+}
+
+
+.ten-top-tips-text-right  p{ 
+    color: #fff;
+	font-size: 18px;
+	line-height: 1.4;
+	padding-left: 20px;
+	width: 155px;
+	margin-top: 50px;
+}
+
+.report-image-lp img{
+	margin-left:65px;
+	margin-top: 15px;
+}
+
+.node-type-landing-page-base .pane-webform-client-block-70 .field-name-body p{
+	padding-left: 15px;
+	padding-right: 15px;
+	color:#fff;
+}
+
+.node-type-landing-page-base .pane-webform-client-block-70{
+	background-color: #001959;
+	width:300px;
+	border-radius:15px;
+	margin-bottom: 40px;
+	padding-top: 60px;	
+}
+
+.node-type-landing-page-base form#webform-client-form-70 .name{
+	width: 270px;
+}
+
+ .name{
+	width: 270px;
+}
+
+
+.node-type-landing-page-base form#webform-client-form-70 .phone{
+	width: 270px;
+	}
+
+.node-type-landing-page-base form#webform-client-form-70 .email{
+	width: 270px;
+}
+
+.email{
+	width: 270px;
+}
+
+.node-type-landing-page-base form#webform-client-form-70 .message{
+	width: 270px;
+}
+
+.message{
+	width: 270px;
+}
+
+.node-type-landing-page-base form#webform-client-form-70 .webform-component--name{
+	padding-top: 20px;
+	padding-left:15px;
+}
+
+.node-type-landing-page-base form#webform-client-form-70 .webform-component--phone{
+	padding-top: 10px;
+	padding-left:15px;
+}
+
+.node-type-landing-page-base form#webform-client-form-70 .webform-component--email{
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+.node-type-landing-page-base form#webform-client-form-70 .webform-component--message{
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+.node-type-landing-page-base form#webform-client-form-70 .webform-component--message .form-textarea-wrapper .grippie {
+    display: block;
+	width: 268px;
+	
+}
+
+.node-type-landing-page-base .pane-webform-client-block-71 .field-name-body p{
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding-top: 10px;
+	color:#fff;
+}
+
+.node-type-landing-page-base .pane-webform-client-block-71{
+	background-color: #001959;
+	width:620px;
+	border-radius:15px;
+}
+
+.node-type-landing-page-base form-webform-client-form-71{
+	margin-top: 15px;
+	margin-bottom: 10px; 
+}
+
+.node-type-landing-page-base form#webform-client-form-71 .name{
+	width: 270px;
+}
+
+.node-type-landing-page-base form#webform-client-form-71 .email{
+	width: 270px;
+	
+}
+
+.node-type-landing-page-base form#webform-client-form-71 .webform-component--name{
+	padding-left:15px;
+}
+
+.node-type-landing-page-base form#webform-client-form-71 .webform-component--email{
+	padding-left: 15px;
+	float:left;
+}
+
+.node-webform h2 a{
+	display:none;
+}
+
+.node-type-landing-page-base form#webform-client-form-70 input[type="submit"],
+.node-type-landing-page-base form#webform-client-form-70 input[type="button"],
+.node-type-landing-page-base form#webform-client-form-70 input[type="reset"]{
+	color: #fff;
+	text-shadow:none;
+	font-size: 15px;
+	width: 270px;
+	height: 70px;
+	margin-top:20px;
+	margin-bottom: 160px;
+	margin-left: 15px;	
+	background-color: #ff4500;
+	background-image:none;
+}
+
+.node-type-landing-page-base form#webform-client-form-71 input[type="submit"],
+.node-type-landing-page-base form#webform-client-form-71 input[type="button"],
+.node-type-landing-page-base form#webform-client-form-71 input[type="reset"]{
+	color: #fff;
+	text-shadow:none;
+	font-size: 15px;
+	background-color: #ff4500;
+	background-image:none;
+	float:right;
+	width: 270px;
+	height: 80px;
+	margin-top:-40px;
+	margin-right: 15px;
+	margin-bottom: 20px;
+	margin-left: 15px;	
+	
+}
+
+.node-type-landing-page-base .view-social-media .views-row,
+.page-node-5 .view-social-media .views-row,
+.page-node-43 .view-social-media .views-row,
+.page-node-44 .view-social-media .views-row,
+.page-node-45 .view-social-media .views-row,
+.page-node-47 .view-social-media .views-row,
+.page-node-56 .view-social-media .views-row,
+.page-node-61 .view-social-media .views-row,
+.page-content-key-tips .view-social-media .views-row, 
+.page-content-jargon-buster .view-social-media .views-row {
+	 float:left;
+	 margin-top: 10px;
+	 margin-left: 20px;
+}
+
+/* Contact Form */
+
+#webform-client-form-5{
+	width: 380px;
+}
+
+#webform-client-form-5 .webform-component--message .form-textarea-wrapper .grippie {
+    display: block;
+	width: 378px;
+	
+}
+
+
+#webform-client-form-5 .form-item, 
+#webform-client-form-5.form-actions{
+	margin-top:0.15em;
+	margin-right:5px;
+	margin-bottom:1em;
+	float: left;
+	width: 380px;
+}
+
+#node-webform-5 h2{
+    font-family: font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #4599cc;
+    text-align: left;
+    font-size:16px;
+    line-height:24px;
+    margin-top:0px;
+    margin-bottom:10px;
+    padding-top:6px;  
+}
+
+
+.panel-col-last .pane-testimonials h2.pane-title{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.testimonials-landing-page-free-report .views-row a {
+	margin-left: 10px;
+}
+
+.landing-page-testimonials {
+	background-color: #FFE9E8;
+	border-radius: 11px;
+	height: 300px;
+	margin-bottom: 40px;
+}
+
+.landing-page-testimonials h2 {
+	margin-left: 12px;
+	padding-top: 35px;
+}
+
+.landing-page-testimonials .views-field-title{
+	margin-right: 12px;
+	margin-bottom: 8px;
+	margin-left: 12px;	
+}
+		
+.landing-page-testimonials p{
+	font-size: 13px;
+	margin-right:12px;
+	margin-left: 12px;
+}
+
+	/* Contact-Us form */
+.page-node-5 .node-webform input[type="submit"] {
+	text-indent: -9999px;
+	background: url("../images/submit-button.png") no-repeat scroll 0 0 transparent; 
+    height: 70px;
+    width: 80px;
+	margin-left: 400px;
+	margin-top: -170px;
+	border:none;
+}
+
+.page-node-5 .node-webform button{
+	border-color: #fff;	
+	
+}
+.page-node-5 textarea,
+.page-node-5 select,
+.page-node-5 input[type="email"],
+.page-node-5 input[type="text"],
+.page-node-5 input[type="textarea"],
+.page-node-5 input[type="date"]{
+   background-color: #f2f6f8;
+   width: 380px;
+}
+
+.free-report p{
+	font-family:  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 8pt;
+    font-weight: normal;
+    margin-left: 0px;
+}
+/*
+input[type="reset"], input[type="submit"], input[type="button"] {
+-webkit-appearance: none;
+-moz-border-radius: 11px;
+-webkit-border-radius: 11px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding;
+background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+border-radius: 11px;
+background: #ddd url(../images/button.png) repeat-x;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+/* border: 1px solid; */
+cursor: pointer;
+color: #333;
+font-weight: bold;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+font-size: 12px;
+outline: 0;
+overflow: visible;
+padding: 3px 10px 4px;
+text-shadow: #fff 0 1px 1px;  
+width: auto;
+border-color: #ddd #bbb #999;
+margin-left; 200px;
+}
+
+button {
+-webkit-appearance: none;
+-moz-border-radius: 11px;
+-webkit-border-radius: 11px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding;
+background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+border-radius: 11px;
+background: #ddd url(../images/button.png) repeat-x;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+border: 1px solid;
+cursor: pointer;
+color: #333;
+font-weight: bold;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+font-size: 12px;
+outline: 0;
+overflow: visible;
+padding: 3px 10px 4px;
+text-shadow: #fff 0 1px 1px;  
+width: auto;
+border-color: #ddd #bbb #999;
+margin-left; 200px;
+display:block;
+}
+*/
+
+.testimonials-landing-page-free-report p{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom:10px;
+	font-size: 13px;
+}
+
+/* Thank You Page */
+
+.node-type-thank-you .panel-col{
+	margin:40px 5px 5px 210px;
+	height: 300px;
+}
+
+.node-type-thank-you .panel-col p{
+	margin-left: 10px;
+	font-family:  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+	font-weight: normal;
+}
+
+/* Booking Form */
+
+article#node-webform-56 {
+	margin-left: -20px;
+}
+
+article#node-webform-56 .booking-date {
+	margin-left: 400px;
+	margin-top: -170px;
+}
+
+article#node-webform-56 #webform-component-time-available-from {
+	margin-left: 400px;
+	margin-top: -140px;
+}
+
+article#node-webform-56 #webform-component-time-available-to {
+	float: right;
+	margin-top: -54px;
+}
+
+
+.page-node-56 .from-time{
+	margin-left: 400px;
+	margin-top: 0px;
+	
+}
+
+.page-node-56 .to-time{
+	margin-left: 400px;
+	margin-top: 20px;
+}
+
+.page-node-56 .node-webform input[type="submit"] {
+	text-indent: -9999px;
+	background: url("../images/submit-button.png") no-repeat scroll 0 0 transparent; 
+    height: 70px;
+    width: 80px;
+	margin-top: -90px;
+	margin-left: 660px;
+	border:none;
+}
+
+.page-node-56 .node-webform button{
+	border-color: #fff;	
+}
+
+.page-node-56 textarea,
+.page-node-56 select,
+.page-node-56 input[type="email"],
+.page-node-56 input[type="text"],
+.page-node-56 input[type="date"]{
+   background-color: #f2f6f8;
+}
+
+.node-blog .node-links li a{
+	display: none;
+}
