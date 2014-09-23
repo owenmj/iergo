@@ -29,14 +29,32 @@ Installation
 Webform Protected Downloads relies on the core File module and the contributed
 modules Webform and Token, which must be downloaded and enabled separately.
 
+The following steps guide you through a basic setup of all necessary
+components. It is assumed that you use the default webform content type called
+"webform".
+
 1. Unpack the Webform Protected Downloads folder and contents in the
    appropriate modules directory of your Drupal installation. This is probably
    sites/all/modules/
 2. Enable the Webform Protected Downloads module in the administration section
    of your site: admin/build/modules
 3. If you're not using Drupal's default administrative account, make sure
-   "administer webform protected downloads" is enabled on the user permissions
+   "administer webform protected downloads" is enabled on the user
+permissions
    page.
+4. You'll need to have Private Files enabled within Drupal's file system.
+   Visit admin/config/media/file-system and set 'sites/default/files/private'
+   as your Private file system path.
+   Visit https://drupal.org/documentation/modules/file for more information
+   about securing files
+5. Go to the Webform Content Type admin/structure/types/manage/webform and
+   create a new field. Typically you would use a file field called Download but
+   you call it anything. This field must be set to Private
+6. Create a webform with at least one email field. This must be set to
+   mandatory.
+7. On the Edit Tab of your Webform is where you will upload your Protected
+   Download file. Once you've uploaded your Protected Download, click Save.
+   Then click the Protected Download tab and configure as required.
 
 Usage
 ===========

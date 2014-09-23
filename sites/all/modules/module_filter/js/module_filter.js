@@ -40,13 +40,11 @@ Drupal.ModuleFilter.setState = function(key, value) {
   var existing = Drupal.ModuleFilter.getState(key);
   if (existing != value) {
     Drupal.ModuleFilter.state[key] = value;
-    if (Drupal.settings.moduleFilter.rememberUpdateState) {
-      var query = [];
-      for (var i in Drupal.ModuleFilter.state) {
-        query.push(i + '=' + Drupal.ModuleFilter.state[i]);
-      }
-      $.cookie('DrupalModuleFilter', query.join('&'), { expires: 7, path: '/' });
+    var query = [];
+    for (var i in Drupal.ModuleFilter.state) {
+      query.push(i + '=' + Drupal.ModuleFilter.state[i]);
     }
+    $.cookie('DrupalModuleFilter', query.join('&'), { expires: 7, path: '/' });
   }
 };
 
@@ -146,7 +144,7 @@ Drupal.ModuleFilter.Filter = function(element, selector, options) {
         }
 
         var rulesResult = self.processRules(item);
-        if (rulesResult == true) {
+        if (rulesResult !== false) {
           return true;
         }
       }
@@ -235,14 +233,14 @@ Drupal.ModuleFilter.Filter.prototype.processRules = function(item) {
     for (var i in self.options.rules) {
       var func = self.options.rules[i];
       rulesResult = func(self, item);
-      if (rulesResult == false) {
+      if (rulesResult === false) {
         break;
       }
     }
   }
-  if (rulesResult == true) {
+  if (rulesResult !== false) {
     $item.removeClass('js-hide');
-    self.results.push($item);
+    self.results.push(item);
   }
   return rulesResult;
 };

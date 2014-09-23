@@ -8,9 +8,9 @@ files[] = views_column_class.module
 files[] = views_column_class.views.inc
 files[] = views_column_class_style_plugin.inc
 
-; Information added by drupal.org packaging script on 2012-04-29
+; Information added by drupal.org packaging script on 2013-10-19
 version = "7.x-1.0-alpha1+1-dev"
 core = "7.x"
 project = "views_column_class"
-datestamp = "1335703535"
+datestamp = "1382164672"
 

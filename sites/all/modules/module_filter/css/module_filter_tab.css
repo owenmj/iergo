@@ -3,6 +3,9 @@
 }
 
 #module-filter-tabs {
+  float: left;
+}
+#module-filter-tabs ul {
   width: 239px;
   list-style: none;
   list-style-image: none;
@@ -11,7 +14,6 @@
   border-top: none;
   margin: 0;
   padding: 0;
-  float: left;
   line-height: 1;
 }
 #module-filter-tabs li {
@@ -24,6 +26,18 @@
 #module-filter-tabs li#new-tab {
   margin-bottom: 10px;
   border-bottom: 1px solid #ccc;
+}
+#module-filter-tabs li.disabled,
+#module-filter-tabs li#new-tab.disabled {
+  pointer-events: none;
+  cursor: default;
+  background: #ccc;
+  border-top-color: #bbb;
+  border-bottom-color: #bbb;
+}
+#module-filter-tabs li.disabled a,
+#module-filter-tabs li.disabled span {
+  color: #999;
 }
 #module-filter-tabs li.suggest {
   background: #F9F9F9;
@@ -67,7 +81,6 @@
 #module-filter-tabs li.selected a:focus,
 #module-filter-tabs li.selected a:active {
   background-color: #fff;
-  border-right-width: 0;
   margin-right: -1px;
 }
 #module-filter-tabs li .summary {
@@ -96,8 +109,15 @@ html.js .module-filter-inputs-wrapper .form-item {
 html.js .module-filter-inputs-wrapper label {
   display: inline;
 }
+html.js .module-filter-inputs-wrapper input[name="module_filter[name]"] {
+  width: 80%;
+}
 html.js #module-filter-show-wrapper {
   margin-bottom: 1em;
+}
+html.js #module-filter-modules {
+  margin-left: 240px;
+  border: 1px solid #ccc;
 }
 #module-filter-modules table {
   border-top: none;
@@ -147,11 +167,14 @@ html.js #module-filter-modules table td {
 .admin-version {
   white-space: nowrap;
 }
-.admin-operations li {
+.admin-operations {
   float: right;
 }
+.admin-operations a.module-link {
+  display: inline;
+}
 
-.toggle-enable {
+html.js .toggle-enable {
   margin: auto;
   position: relative;
   width: 50px;
@@ -174,17 +197,17 @@ html.js #module-filter-modules table td {
   background-image: -moz-linear-gradient(left, red 50%, orange 50%, orange 100%);
   background-image: linear-gradient(left, red 50%, orange 50%, orange 100%);
 }
-.toggle-enable.enabled {
+html.js .toggle-enable.enabled {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(50%, orange), color-stop(50%, green), color-stop(100%, green));
   background-image: -moz-linear-gradient(left, orange 50%, green 50%, green 100%);
   background-image: linear-gradient(left, orange 50%, green 50%, green 100%);
 }
-.toggle-enable.disabled {
+html.js .toggle-enable.disabled {
   background: #ccc;
   border-color: #ddd;
   cursor: auto;
 }
-.toggle-enable div {
+html.js .toggle-enable div {
   position: relative;
   color: #777;
   width: 26px;
@@ -202,13 +225,13 @@ html.js #module-filter-modules table td {
   -o-transition: left 0.2s;
   transition: left 0.2s;
 }
-.toggle-enable.disabled div {
+html.js .toggle-enable.disabled div {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #FEFEFE), color-stop(100%, #EEEEEE));
   background-image: -moz-linear-gradient(top, #FEFEFE 0%, #EEEEEE 100%);
   background-image: linear-gradient(top, #FEFEFE 0%, #EEEEEE 100%);
 }
-.toggle-enable div:after,
-.toggle-enable div:before {
+html.js .toggle-enable div:after,
+html.js .toggle-enable div:before {
   color: white;
   text-shadow: none;
   width: 25px;
@@ -217,14 +240,23 @@ html.js #module-filter-modules table td {
   font-size: 9px;
   font-weight: bold;
 }
-.toggle-enable div:before {
+html.js .toggle-enable div:before {
   content: "OFF";
   left: -24px;
 }
-.toggle-enable div:after {
+html.js .toggle-enable div:after {
   content: "ON";
   right: -24px;
 }
-.toggle-enable.off div {
+html.js .toggle-enable.off div {
   left: 24px;
+}
+
+#module-filter-tabs.top-fixed {
+  position: fixed;
+  top: 0;
+}
+#module-filter-tabs.bottom-fixed {
+  position: fixed;
+  bottom: 0;
 }

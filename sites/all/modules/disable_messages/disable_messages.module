@@ -41,29 +41,50 @@ function disable_messages_menu() {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function disable_messages_theme($existing, $type, $theme, $path) {
+  $items = array();
+  // Expose a disable_messages_status_messages theme hook that can be
+  // overridden by the themer to override the message display
+  $items['disable_messages_status_messages'] = array(
+    'variables' => array('messages' => NULL),
+  );
+  return $items;
+}
+
+/**
  * Implements hook_theme_registry_alter().
  */
 function disable_messages_theme_registry_alter(&$theme_registry) {
-  $theme_registry['status_messages']['function'] = 'theme_disable_messages_status_messages';
+  $theme_registry['status_messages']['function'] = '_theme_disable_messages_status_messages';
 }
 
 /**
  * Implementation of theme_status_messages() hook to override the core
  * status message output.
  */
-function theme_disable_messages_status_messages($variables) {
+function _theme_disable_messages_status_messages($variables) {
   $display = $variables['display'];
-  $output = '';
 
   // Retrieve messages
   $messages = drupal_get_messages($display);
-  $output = '';
 
   // Filter messages if filtering is enabled.
   if (variable_get('disable_messages_enable', '1')) {
     $messages = disable_messages_apply_filters($messages);
   }
+  
+  // Return themed status messages
+  return theme('disable_messages_status_messages', array('messages' => $messages));
+}
 
+/**
+ * Theme function for theming status messages
+ */
+function theme_disable_messages_status_messages($vars) {
+  $messages = $vars['messages'];
+  $output = '';
   $status_heading = array(
     'status' => t('Status message'),
     'error' => t('Error message'),
@@ -106,6 +127,7 @@ function disable_messages_apply_filters($messages) {
     TRUE
   );
   // Store flags for debug.
+  $cache['excluded']['uid'] = FALSE;
   if ($is_user_excluded) {
     $cache['excluded']['uid'] = TRUE;
   }
@@ -246,7 +268,7 @@ function disable_messages_settings_form() {
   $form['disable_messages_filter_options']['role_information'] = array(
     '#type' => 'item',
     '#title' => t('Filering by role'),
-    '#markup' => t('By default, permission to view all status message types are given for all roles. You can change this in !link to limit the roles which can view a given message type.', array('!link' => l('administer permissions', 'admin/user/permissions', array('fragment' => 'module-disable_messages')))),
+    '#markup' => t('By default, permission to view all message types are given for all roles. You can change this in !link to limit the roles which can view a given message type.', array('!link' => l('administer permissions', 'admin/people/permissions', array('fragment' => 'module-disable_messages')))),
   );
   $options = array(
     t('Apply filters on all pages.'),
@@ -283,7 +305,7 @@ function disable_messages_settings_form() {
     '#type' => 'checkbox',
     '#title' => t('Enable debug mode'),
     '#default_value' => variable_get('disable_messages_enable_debug', '0'),
-    '#description' => t('Check this to enable debug information. The debug information will be shown in an explicityly hidden div sent to the page via $closure. You can use firebug or a similar tool like that to set the visibility of this div or just view source to see the debug information. Safe to use even on production sites.'),
+    '#description' => t('Check this to enable debug information. The debug information will be shown in an explicitly hidden div sent to the page via $closure. You can use firebug or a similar tool like that to set the visibility of this div or just view source to see the debug information. Safe to use even on production sites.'),
   );
   $form['disable_messages_debug']['disable_messages_debug_visible_div'] = array(
     '#type' => 'checkbox',

@@ -36,7 +36,7 @@ function disable_messages_install() {
       );
     }
   }
-  drupal_set_message(st('Added view all status message permissions for all roles. You can change this in !link', array('!link' => l(st('administer permissions'), 'admin/people/permissions', array('fragment' => 'module-disable_messages')))));
+  drupal_set_message(st('Added view all message type permissions for all roles. You can change this in !link', array('!link' => l(st('administer permissions'), 'admin/people/permissions', array('fragment' => 'module-disable_messages')))));
 }
 
 /**
@@ -53,4 +53,11 @@ function disable_messages_uninstall() {
   variable_del('disable_messages_enable_debug');
   variable_del('disable_messages_debug_visible_div');
   // Permission deletions are handled by core
+}
+
+/**
+ * Implementation of hook_update().
+ */
+function disable_messages_update_7100() {
+  // Do nothing other than force update of theme registry.
 }

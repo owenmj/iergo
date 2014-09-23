@@ -455,8 +455,37 @@ function webform_protected_downloads_node_delete($node) {
  * @return boolean
  */
 function webform_protected_downloads_node_is_webform($node) {
-  $webform_types = webform_variable_get('webform_node_types');
+  // API change introduced by https://drupal.org/node/2062235
+  if (function_exists('webform_node_types')) {
+    $webform_types = webform_node_types();
+  }
+  else {
+    $webform_types = webform_variable_get('webform_node_types');
+  }
   return in_array($node->type, $webform_types);
+}
+
+/**
+ * Retrieve all private file fields.
+ *
+ * This actually retrieves fields of types 'file' and 'image'.
+ *
+ * @param string $node 
+ * @return array
+ */
+function webform_protected_downloads_node_get_private_file_fields($node) {
+  $private_file_fields = &drupal_static(__FUNCTION__);
+  if (!isset($private_file_fields[$node->nid])) {
+    $private_file_fields[$node->nid] = array();
+    $field_instances = field_info_instances('node', $node->type);
+    foreach ($field_instances as $field_name => $field) {
+      $field_info = field_info_field($field_name);
+      if (in_array($field_info['type'], array('file', 'image')) && $field_info['settings']['uri_scheme'] == 'private') {
+        $private_file_fields[$node->nid][] = $field_name;
+      }
+    }
+  }
+  return $private_file_fields[$node->nid];
 }
 
 /**
@@ -467,15 +496,9 @@ function webform_protected_downloads_node_is_webform($node) {
  */
 function webform_protected_downloads_node_get_private_files($node) {
   
-  // collect all available private file fields
-  $private_file_fields = array();
-  foreach ($node as $key => $element) {
-    if (strpos($key, 'field_') === 0) {
-      $field_info = field_info_field($key);
-      if (in_array($field_info['type'], array('file', 'image')) && $field_info['settings']['uri_scheme'] == 'private') {
-        $private_file_fields[] = $key;
-      }
-    }
+  $private_file_fields = webform_protected_downloads_node_get_private_file_fields($node);
+  if (!count($private_file_fields)) {
+    return array();
   }
   
   /*
@@ -489,7 +512,7 @@ function webform_protected_downloads_node_get_private_files($node) {
   */
   $private_files = array();
   foreach ($private_file_fields as $field) {
-    
+
     // check if the node has acceptable file fields
     if (!is_array($node->$field) || !count($node->$field)) {
       continue;
@@ -530,34 +553,44 @@ function webform_protected_downloads_help($path, $arg) {
       This module operates on nodes that are used as webforms. A webform node that has been configured for protected downloads acts just like a normal webform survey, expect that the user must give a valid e-mail address. After the user submits the webform an e-mail will be sent to the given e-mail address. This e-mail contains a link to a download page where all protected files are listed and can be downloaded from.
       In order to use a webform node for protected downloads this node must meet the following criteria:
       <ul>
-      <li>must have at least one file field that is configured as a private file field</li>
-      <li>at least one private file must have been attached to the node</li>
-      <li>the webform must have at least one mandatory e-mail component</li>
+        <li>must have at least one file field that is configured as a private file field</li>
+        <li>at least one private file must have been attached to the node</li>
+        <li>the webform must have at least one mandatory e-mail component</li>
       </ul>
 
       <h3>Step-by-step guide to use this module</h3>
       <ol>
-      <li><a href='@webform_help_url'>Create a webform</a></li>
-      <li>Add a a mandatory mail component to the webform</li>
-      <li>Add a file field for the created webform node and configure it as a private file field (see <em>Upload destination</em> under <em>File Field settings</em>)</li>
-      <li>Upload at least one file to this field using the node edit form</li>
-      <li>Go to the <em>Protected downloads</em> tab of the node and configure details like
-      <ul>
-      <li>how long should the download stay available for a given user</li>
-      <li>the mail text of the outgoing mail, including a placeholder for the download link</li>
-      <li>custom text that appears on the downloads page above the file listing</li>
-      <li>custom text for an access denied page</li>
-      </ul>
-      </li>
+        <li><a href='@webform_help_url'>Create a webform</a></li>
+        <li>Add a a mandatory mail component to the webform</li>
+        <li>Add a file field for the created webform node and configure it as a private file field (see <em>Upload destination</em> under <em>File Field settings</em>)</li>
+        <li>Upload at least one file to this field using the node edit form</li>
+        <li>Go to the <em>Protected downloads</em> tab of the node and configure details like
+        <ul>
+          <li>how long should the download stay available for a given user</li>
+          <li>the mail text of the outgoing mail, including a placeholder for the download link</li>
+          <li>custom text that appears on the downloads page above the file listing</li>
+          <li>custom text for an access denied page</li>
+        </ul>
+        </li>
       </ol>
 
       <h3>How to send HTML formatted mails</h3>
       The e-mails containing the access information for the protected files are send using default drupal mail functionality. That's why you should be able to use any mailengine that offers html support in order to send formatted mails. The only mailengine that has actively been tested in conjunction with this module is the <a href='@mimemail_project_url'>mimemail module</a>.
       
+      <h3>Having problems with the configuration? Here's the checklist:</h3>
+      <ul>
+        <li>Content type in question is webform enabled? Check your <a href='@webform_settings_url'>Webform settings</a>.</li>
+        <li>Content type has a file field that is configured as private?</li>
+        <li>On /node/NID/edit a file has been added to the aforementioned file field?</li>
+        <li>On node/NID/webform you have at least one component of type \"mail\" that is set as required?</li>
+        <li>The user you are logged in as, has the permission \"administer webform protected downloads\"?</li>
+      </ul>
+      
       <h3>Useful references</h3>
       <ul>
-      <li><a href='@reference_files_url'>Working with files in Drupal 6</li>
+        <li><a href='@reference_files_url'>Working with files in Drupal 7</li>
       </ul>", array(
+        '@webform_settings_url' => url('admin/config/content/webform'),
         '@webform_help_url' => url('admin/help/webform'),
         '@mimemail_project_url' => url('http://drupal.org/project/mimemail'),
         '@reference_files_url' => url('http://drupal.org/documentation/modules/file'),
@@ -597,7 +630,7 @@ function webform_protected_downloads_file_set_protected($nid, $fid, $protected) 
  * @return boolean
  */
 function webform_protected_downloads_file_is_protected($nid, $fid) {
-  static $wpd_protected;
+  $wpd_protected = &drupal_static(__FUNCTION__);
   if (!isset($wpd_protected[$nid])) {
     $wpd_protected[$nid] = array();
     $result = db_query("SELECT fid FROM {wpd_protected_files} WHERE nid = :nid", array(':nid' => $nid));
@@ -672,7 +705,7 @@ function webform_protected_downloads_file_user_has_access($nid, $fid) {
  * @return void
  */
 function webform_protected_downloads_node_has_protected_files($nid) {
-  static $wpd_nodes;
+  $wpd_nodes = &drupal_static(__FUNCTION__);
   if (!isset($wpd_nodes[$nid])) {
     $count = db_query("SELECT COUNT(*) FROM {wpd_protected_files} WHERE nid = :nid", array(':nid' => $nid))->fetchColumn();
     $wpd_nodes[$nid] = $count > 0;
@@ -719,7 +752,7 @@ function webform_protected_downloads_set_configuration($nid, $args) {
  * @return void
  */
 function webform_protected_downloads_get_configuration($nid, $field = NULL, $default = NULL) {
-  static $wpd_node_conf;
+  $wpd_node_conf = &drupal_static(__FUNCTION__);
   
   if (!isset($wpd_node_conf[$nid])) {
     $wpd_node_conf[$nid] = db_query("SELECT * FROM {wpd_node_configuration} WHERE nid = :nid", array(':nid' => $nid))->fetchObject();
@@ -806,7 +839,7 @@ function webform_protected_downloads_create_hash() {
  * @return void
  */
 function webform_protected_downloads_get_hash_details($hash) {
-  static $wpd_hash;
+  $wpd_hash = &drupal_static(__FUNCTION__);
   if (!isset($wpd_hash[$hash])) {
     $result = db_query("SELECT * FROM {wpd_access_hashes} WHERE hash = :hash", array(':hash' => $hash));
     $wpd_hash[$hash] = $result->fetchObject();
@@ -1043,7 +1076,7 @@ function webform_protected_downloads_file_widget_after_build($form_element, &$fo
  * @return void
  */
 function _webform_protected_downloads_set_warning() {
-  static $wpd_message;
+  $wpd_message = &drupal_static(__FUNCTION__);
   if (!isset($wpd_message)) {
     drupal_set_message(t('The mandatory email field has been removed from this webform. Protected downloads have been disabled. Please fix this problem.'));
     $wpd_message = TRUE;

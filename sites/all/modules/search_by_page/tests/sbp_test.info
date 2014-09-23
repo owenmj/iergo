@@ -6,9 +6,9 @@ hidden = TRUE
 files[] = sbp_test.module
 files[] = sbp_test.install
 
-; Information added by drupal.org packaging script on 2012-06-21
-version = "7.x-1.2+5-dev"
+; Information added by drupal.org packaging script on 2013-01-19
+version = "7.x-1.3"
 core = "7.x"
 project = "search_by_page"
-datestamp = "1340239006"
+datestamp = "1358612280"
 
